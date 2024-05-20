@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contenu | Space+</title>
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="ressources/images/favicon.ico"
+        />
+        <link rel="stylesheet" href="styles/style.css" />
+        <link rel="stylesheet" href="styles/content.css" />
+        <script src="scripts/accesvalide.js" defer></script>
+        <script src="scripts/content.js" defer></script>
+    </head>
+    <body class="loading">
+        <main>
+            <header>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a class="active" href="content.html">Contenu</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                </ul>
+                <div class="user-info">
+                    <span id="bonjour">Bonjour {username}</span>
+                    <button id="logout">Logout</button>
+                </div>
+            </header>
+
+            <section id="images" class="glassmorphism">
+                <h2>Images</h2>
+                <div id="imageContainer" class="content-container"></div>
+            </section>
+
+            <section id="videos" class="glassmorphism">
+                <h2>Vidéos</h2>
+                <div id="videoContainer" class="content-container"></div>
+            </section>
+
+            <section id="audios" class="glassmorphism">
+                <h2>Audios</h2>
+                <div id="audioContainer" class="content-container"></div>
+            </section>
+
+            <!-- Modal -->
+            <div id="cardModal" class="modal">
+                <div class="modal-content glassmorphism" id="modalContent">
+                    <span class="close">&times;</span>
+                    <div id="modalBody"></div>
+                </div>
+            </div>
+
+            <footer id="footer" class="glass-footer">
+                <div class="footer-content">
+                    <div class="footer-section about">
+                        <h2>Qui sommes nous ?</h2>
+                        <p>
+                            Space+ est la référence en contenu spatial. Nous
+                            vous offrons l'espace depuis chez vous !
+                        </p>
+                    </div>
+                    <div class="footer-section links">
+                        <h2>Où nous trouver</h2>
+                        <a href="#">Facebook</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">LinkedIn</a>
+                    </div>
+                    <div class="footer-section contact">
+                        <h2>Contactez nous</h2>
+                        <p>Email: contact@spaceplus.com</p>
+                        <p>Phone: +123 456 7890</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Space+. Tous droits réservés.</p>
+                </div>
+            </footer>
+        </main>
+    </body>
+</html>

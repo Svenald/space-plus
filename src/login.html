@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="ressources/images/favicon.ico"
+        />
+        <title>SPACE+ | Connexion</title>
+        <link rel="stylesheet" href="styles/login.css" />
+        <script src="scripts/login/p5.js"></script>
+        <!--source : https://p5js.org/ -->
+        <script src="scripts/login/login.js"></script>
+        <script src="scripts/login/starfield.js"></script>
+    </head>
+    <body>
+        <form id="loginForm">
+            <img
+                src="ressources/images/space_plus.webp"
+                alt="logo-space-plus"
+                class="logo"
+            />
+
+            <label for="id">Identifiant</label>
+            <input type="text" placeholder="Courriel ou Téléphone" id="id" />
+
+            <label for="password">Mot de passe</label>
+            <input type="password" placeholder="Password" id="password" />
+
+            <button type="submit" id="login">Se Connecter</button>
+            <div class="social">
+                <div class="go"><i class="fab fa-google"></i> Google</div>
+                <div class="fb"><i class="fab fa-facebook"></i> Facebook</div>
+            </div>
+            <p class="create-account">
+                Pas de compte? <a href="register.html">Créer un compte</a>
+            </p>
+        </form>
+
+        <!-- Menu -->
+        <div id="menu-toggle" onclick="toggleMenu()">☰ Menu</div>
+
+        <nav id="hidden-menu">
+            <div>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="connexion.html">Connexion</a></li>
+                    <li><a href="register.html">Inscription</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <script>
+            var starDensity = 500;
+            var planetDensity = 100;
+            var maxSpeed = 120;
+            var labellingOn = true;
+            var drawBox = false;
+            var drawSphere = false;
+            var refresh = false;
+
+            function generate() {
+                setup(
+                    starDensity,
+                    planetDensity,
+                    maxSpeed,
+                    labellingOn,
+                    drawBox,
+                    drawSphere
+                );
+            }
+
+            window.onload = generate;
+        </script>
+        <footer id="footer">
+            <p>Tous droits réservés &copy;</p>
+        </footer>
+    </body>
+</html>

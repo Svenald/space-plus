@@ -1,0 +1,129 @@
+body.loading {
+    display: none;
+}
+
+html {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: #fff;
+    background: #000;
+}
+
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.content-element {
+    width: 300px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.content-element h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.content-element p {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 1em;
+    text-align: center;
+}
+
+.content-element img,
+.content-element video,
+.content-element iframe {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.content-element img {
+    height: auto;
+    max-height: 60%;
+    object-fit: cover;
+}
+
+.content-element video {
+    height: auto;
+    max-height: 60%;
+}
+
+.content-element iframe {
+    height: auto;
+    max-height: 60%;
+}
+
+#images,
+#videos,
+#audios {
+    grid-auto-rows: auto;
+    flex: auto;
+    display: grid;
+    margin: 2% 5% 0 5%;
+}
+/* Styles pour les tags */
+.tags {
+    font-style: italic;
+    color: #888;
+    margin-top: 10px;
+}
+
+/* Styles pour la fenêtre modale */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    margin: 5% auto;
+    padding: 20px;
+    width: 80%;
+    height: 80%; /* 80% of the viewport height */
+    max-width: 80%;
+    max-height: 80%;
+    overflow: auto;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
